@@ -19,13 +19,14 @@ jobs:
       - name: npm install and build
         run: |
           npm install
-          npm run build
       - name: Run test and report issues
         run: npm test
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4.0.1
-        with:
-          fail_ci_if_error: true # opcional (valor por defecto = false)
-          token: d62ebc6a-bb0f-4bb7-a644-602d0ccf8eeb
-          verbose: true # opcional (valor por defecto = false)
-          slug: dileofrancoj/git-workflow
+
+      - name: Run the tests and generate coverage report
+        run: npm test -- --coverage
+
+      - name: Build
+        run: npm run build
