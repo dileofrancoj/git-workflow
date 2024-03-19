@@ -32,7 +32,8 @@ jobs:
           slug: dileofrancoj/git-workflow
           coverage:
             status:
-              project:
+              # Use 'patch' for pull request coverage reporting
+              patch:
                 default:
                   # basic
                   target: auto #default
