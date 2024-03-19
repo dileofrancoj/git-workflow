@@ -16,16 +16,16 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install
+      - name: npm install and build
         run: |
           npm install
           npm run build
       - name: Run test and report issues
         run: npm test
       - name: Upload coverage to Codecov
-      - uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v4
         with:
-          fail_ci_if_error: true # optional (default = false)
-          files: ./clover.xml
+          fail_ci_if_error: true # opcional (valor por defecto = false)
+          files: ./coverage/clover.xml # Ruta al archivo de cobertura generado
           token: de8bdfd9-e504-4776-88ee-686acfa30094
-          verbose: true # optional (default = false)
+          verbose: true # opcional (valor por defecto = false)
