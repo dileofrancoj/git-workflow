@@ -23,4 +23,9 @@ jobs:
       - name: Run test and report issues
         run: npm test
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
+      - uses: codecov/codecov-action@v4
+        with:
+          fail_ci_if_error: true # optional (default = false)
+          files: ./clover.xml
+          token: de8bdfd9-e504-4776-88ee-686acfa30094
+          verbose: true # optional (default = false)
