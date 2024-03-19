@@ -14,9 +14,15 @@ function App() {
     if (count === 0) return <h2>Bye world</h2>;
     return <h2>Hello world</h2>;
   };
+
+  const world = () => {
+    if (count === 1) return <h2>Bye world</h2>;
+    return <h2>Hello world</h2>;
+  };
   return (
     <>
       <div>
+        {world()}
         {helloWorld()}
         {byeWorld()}
         <a href="https://vitejs.dev" target="_blank">
