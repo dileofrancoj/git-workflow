@@ -1,13 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
-on:
-  pull_request:
-    branches:
-      - "*" # Activar en todas las ramas de pull request
-  push:
-    branches:
-      - main # Activar al hacer push a la rama main
