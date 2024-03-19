@@ -29,10 +29,10 @@ jobs:
           token: d62ebc6a-bb0f-4bb7-a644-602d0ccf8eeb
           verbose: true # opcional (valor por defecto = false)
           slug: dileofrancoj/git-workflow
-        coverage:
-          status:
-            patch:
-              default:
+          # Properly indented 'coverage' section
+          coverage:
+            status:
+              patch:
                 # basic
                 target: auto
                 threshold: 0%
