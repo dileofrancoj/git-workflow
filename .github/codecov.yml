@@ -1,14 +1,20 @@
 codecov:
-  require_ci_to_pass: yes
-  token: d62ebc6a-bb0f-4bb7-a644-602d0ccf8eeb
-
+  require_ci_to_pass: true
+comment:
+  behavior: default
+  layout: reach,diff,flags,tree,reach
+  show_carryforward_flags: false
 coverage:
   precision: 2
-  range: "60...85"
+  range:
+    - 70.0
+    - 100.0
+  round: down
   status:
-    project:
-      default:
-        target: auto
-        # adjust accordingly based on how flaky your tests are
-        # this allows a 10% drop from the previous base commit coverage
-        threshold: 10%
+    changes: false
+    default_rules:
+      flag_coverage_not_uploaded_behavior: include
+    patch: true
+    project: true
+github_checks:
+  annotations: true
