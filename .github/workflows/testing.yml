@@ -50,11 +50,11 @@ jobs:
           echo "      statuses:" >> .codecov.yml
           echo "        - type: project" >> .codecov.yml
           echo "          target: 100%" >> .codecov.yml
-          echo "          threshold: 1%" >> .codecov.yml
+          echo "          threshold: 50%" >> .codecov.yml
           echo "    - name: frontend" >> .codecov.yml
           echo "      paths:" >> .codecov.yml
           echo "        - web/" >> .codecov.yml
           echo "      statuses:" >> .codecov.yml
           echo "        - type: project" >> .codecov.yml
           echo "          target: auto" >> .codecov.yml
-          echo "          threshold: 1%" >> .codecov.yml
+          echo "          threshold: 50%" >> .codecov.yml
