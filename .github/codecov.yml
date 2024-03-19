@@ -1,0 +1,13 @@
+codecov:
+  require_ci_to_pass: yes
+
+coverage:
+  precision: 2
+  range: "60...85"
+  status:
+    project:
+      default:
+        target: auto
+        # adjust accordingly based on how flaky your tests are
+        # this allows a 10% drop from the previous base commit coverage
+        threshold: 10%
