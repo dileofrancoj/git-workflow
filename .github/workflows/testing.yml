@@ -29,3 +29,20 @@ jobs:
           token: d62ebc6a-bb0f-4bb7-a644-602d0ccf8eeb
           verbose: true # opcional (valor por defecto = false)
           slug: dileofrancoj/git-workflow
+        coverage:
+          status:
+            patch:
+              default:
+                # basic
+                target: auto
+                threshold: 0%
+                base: auto
+                # advanced
+                branches:
+                  - master
+                if_ci_failed: error #success, failure, error, ignore
+                only_pulls: false
+                flags:
+                  - "unit"
+                paths:
+                  - "src"
