@@ -27,7 +27,7 @@ jobs:
         uses: codecov/codecov-action@v4.0.1
         with:
           fail_ci_if_error: true # opcional (valor por defecto = false)
-          token: d62ebc6a-bb0f-4bb7-a644-602d0ccf8eeb
+          token: YOUR_CODECOV_TOKEN # Replace with your actual token
           verbose: true # opcional (valor por defecto = false)
           slug: dileofrancoj/git-workflow
           coverage:
@@ -35,11 +35,13 @@ jobs:
               # Use 'patch' for pull request coverage reporting
               patch:
                 default:
-                  # basic
-                  target: auto #default
+                  # Basic configuration
+                  target: auto # Default target
                   threshold: 0%
-                  base: auto
-                  flags:
-                    - unit
+                  base: auto # Use historical data from the target branch
+                  # Advanced configuration (optional)
+                  # flags:
+                  #   - unit  # Uncomment if applicable
+
                   paths:
-                    - "src"
+                    - "src" # Path to your test coverage files
