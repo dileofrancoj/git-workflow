@@ -30,19 +30,4 @@ jobs:
           verbose: true # opcional (valor por defecto = false)
           slug: dileofrancoj/git-workflow
           # Properly indented 'coverage' section
-          coverage:
-            status:
-              patch:
-                # basic
-                target: auto
-                threshold: 0%
-                base: auto
-                # advanced
-                branches:
-                  - master
-                if_ci_failed: error #success, failure, error, ignore
-                only_pulls: false
-                flags:
-                  - "unit"
-                paths:
-                  - "src"
+          report_code: true
