@@ -9,10 +9,16 @@ function App() {
     if (count === 0) return <h2>Hola mundo</h2>;
     return <h2>Chau mundo</h2>;
   };
+
+  const byeWorld = () => {
+    if (count === 0) return <h2>Bye world</h2>;
+    return <h2>Hello world</h2>;
+  };
   return (
     <>
       <div>
         {helloWorld()}
+        {byeWorld()}
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
