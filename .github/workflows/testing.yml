@@ -23,25 +23,22 @@ jobs:
       - name: Run test and report issues
         run: npm test
 
+      # Step to upload coverage to Codecov
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
-          fail_ci_if_error: true # opcional (valor por defecto = false)
-          token: YOUR_CODECOV_TOKEN # Replace with your actual token
-          verbose: true # opcional (valor por defecto = false)
+          fail_ci_if_error: true
+          token: YOUR_CODECOV_TOKEN # Reemplaza con tu token real
+          verbose: true
           slug: dileofrancoj/git-workflow
-          coverage:
-            status:
-              # Use 'patch' for pull request coverage reporting
-              patch:
-                default:
-                  # Basic configuration
-                  target: auto # Default target
-                  threshold: 0%
-                  base: auto # Use historical data from the target branch
-                  # Advanced configuration (optional)
-                  # flags:
-                  #   - unit  # Uncomment if applicable
 
-                  paths:
-                    - "src" # Path to your test coverage files
+# Configuración de cobertura separada fuera de la acción
+coverage:
+  status:
+    patch:
+      default:
+        target: auto
+        threshold: 0%
+        base: auto
+        paths:
+          - "src"
