@@ -26,6 +26,6 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           fail_ci_if_error: true # opcional (valor por defecto = false)
-          files: ./coverage/clover.xml # Ruta al archivo de cobertura generado
           token: de8bdfd9-e504-4776-88ee-686acfa30094
           verbose: true # opcional (valor por defecto = false)
+          slug: dileofrancoj/git-workflow
